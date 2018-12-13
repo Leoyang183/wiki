@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Collapse,
   Navbar,
@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink
-} from 'reactstrap';
+} from "reactstrap";
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -24,9 +24,9 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light>
+        <Navbar color="faded" className="navbar-dark bg-dark">
           <NavbarBrand href="/" className="mr-auto">
-            reactstrap
+            公主連結資料庫
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
