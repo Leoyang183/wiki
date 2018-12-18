@@ -32,7 +32,7 @@ class Header extends Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/Main/">首頁</NavLink>
+                <NavLink href="/Main">首頁</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/FightGroup">鬥技場組合</NavLink>

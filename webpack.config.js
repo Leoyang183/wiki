@@ -7,22 +7,17 @@ module.exports = {
   mode: 'development',
   entry: {
     app: path.resolve(srcRoot, 'index.js')
-    // app: [
-    //   'webpack/hot/only-dev-server',
-    //   'webpack-dev-server/client?http://localhost:3000',
-    //   // "react-hot-loader/patch",
-    //   __dirname + '/src/index.js'
-    // ]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js',
+    publicPath: '/'
   },
   resolve: {
     alias: {
-      Pages: path.resolve(__dirname, './src/pages/'),
-      Components: path.resolve(__dirname, './src/components/'),
-      Assets: path.resolve(__dirname, './src/assets/')
+      Pages: path.resolve(srcRoot, '/pages/'),
+      Components: path.resolve(srcRoot, '/components/'),
+      Assets: path.resolve(srcRoot, '/assets/')
     }
   },
   module: {
@@ -61,14 +56,6 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     historyApiFallback: true,
-    // historyApiFallback: {
-    //   rewrites: [
-    //     {
-    //       from: /^\/$/,
-    //       to: path.resolve(__dirname, 'dist/index.html')
-    //     }
-    //   ]
-    // },
     hot: true,
     port: 3000
   },
