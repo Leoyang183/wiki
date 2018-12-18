@@ -18,6 +18,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    alias: {
+      Pages: path.resolve(__dirname, './src/pages/'),
+      Components: path.resolve(__dirname, './src/components/'),
+      Assets: path.resolve(__dirname, './src/assets/')
+    }
+  },
   module: {
     rules: [
       {
@@ -67,7 +74,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      filename: path.resolve(path.resolve(__dirname, 'dist/index.html')),
+      filename: path.resolve(__dirname, 'dist/index.html'),
       template: path.resolve(srcRoot, 'index.html')
     }),
     new webpack.NamedModulesPlugin(),
